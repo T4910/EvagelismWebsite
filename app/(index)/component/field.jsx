@@ -12,7 +12,7 @@ const field = ({ question, answer }) => {
     <div className="w-2/3 mx-auto bg-white rounded-xl">
         <div className="flex items-center justify-between font-semibold text-white">
             <h6 className={`${on ? 'rounded-tl-xl' : 'rounded-l-xl'} h-full py-4 px-8 flex-grow bg-orange-400 `}>{question}</h6>
-            <button className={`${on ? 'rounded-tr-xl' : 'rounded-r-xl'} h-full px-8 py-4 inline font-bold bg-orange-500`} onClick={toggle} >+</button>
+            <button className={`${on ? 'rounded-tr-xl' : 'rounded-r-xl'} h-full px-8 py-4 inline font-bold bg-orange-500`} onClick={toggle} >{on ? ' - ' : ' + '}</button>
         </div>
         <div className={`${ !on && 'h-0 hidden'} p-10  transition-all duration-300 ease-in-out rounded-b-xl border-b border-x border-orange-400`}>
             <p>{answer}</p>

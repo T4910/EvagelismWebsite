@@ -5,6 +5,7 @@ import  Executives from './component/executives'
 import  Questions from './component/questions'
 import  Testimonies from './component/testimonies'
 import Welcome from './component/welcome'
+import Community from './component/community'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Executives />
       <Testimonies />
       <Questions />
+      <Community />
        {/* You're always welcome then a slider of our active members */}
       {/* Join evengelism form is the footer */}
     </>
