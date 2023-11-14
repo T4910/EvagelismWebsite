@@ -26,7 +26,7 @@ const navbar = () => {
   }, []);
 
   return (
-    <div className={`pl-4 py-2 pr-8 flex w-full justify-between text-white fixed ${navbarBg} transition-all duration-300 ease-in-out z-20`}>
+    <div className={`pr-2 md:pl-4 py-2 md:pr-8 flex w-full justify-between text-white fixed ${navbarBg} transition-all duration-300 ease-in-out z-20`}>
         <Link href="/">
             <Image src="/images/LUEG LOGO.png" height={60} width={63}/>
         </Link>

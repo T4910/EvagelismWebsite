@@ -22,7 +22,7 @@ const QUESTIONS = [
 
 const questions = () => {
   return (
-    <div className="pb-20 bg-orange-100">
+    <div className="pb-16 lg:pb-20 bg-orange-100">
         <h2 className="text-3xl pt-12 p-8 font-bold text-center">Some questions and answers for you...</h2>
         <div className="flex flex-col gap-8">
             { QUESTIONS.map(({question, answer}, index) => <Field key={index} question={question} answer={answer}/>) }

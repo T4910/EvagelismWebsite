@@ -12,11 +12,11 @@ const statement = () => {
         </p>
       </Card>
       <div className="flex w-5/6 mx-auto gap-2">
-        <Image className="hidden md:block rounded-xl" src="/images/EXEC.jpg" width={400} height={400}/>
-        <div className="p-12 flex flex-col justify-center gap-2">
-          <h4 className=" font-extrabold text-orange-500 text-xl">Mission</h4>
+        <Image className="hidden lg:block rounded-xl" src="/images/EXEC.jpg" width={400} height={400}/>
+        <div className="p-2 md:p-12 flex flex-col justify-center gap-2">
+          <h4 className="lg:text-left text-center font-extrabold text-orange-500 text-xl mb-2 lg:mb-0">Mission</h4>
           <div>
-            <p className="text-lg">Here at Evangelism Group, we aim to: </p>
+            <p className="text-lg hidden lg:block text-left">Here at Evangelism Group, we aim to: </p>
             <ul className="list-disc pl-5 text-lg">
               <li>To show forth the glorious light of salvation by
                 sowing the seed of God's workd into the lives of men.
