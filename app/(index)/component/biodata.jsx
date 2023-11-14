@@ -1,54 +1,39 @@
+import InputTxt from "./inputxt"
+
 const biodata = () => {
   return (
-    <form>
-        <label htmlFor="Full-Name" className="text-white">Full Name:</label>
-        <input type="text" name="Full-Name"/>
+    <form className="text-white grid grid-cols-2">
+        <InputTxt label="Full Name"/>
+        <InputTxt label="Department" inline={true}/>
+        <InputTxt label="Reg No/Matric No" inline={true}/>
+        <InputTxt label="Web Mail" input={'email'}/>
 
-        <label htmlFor="department" className="text-white">Department:</label>
-        <input type="text" name="department"/>
-
-        <label htmlFor="regno">Reg No/Matric No:</label>
-        <input type="number" name="regno" id="regno" />
-
-        <label htmlFor="level">Level:</label>
-        <input type="number" id="level"/>
-
-        <label htmlFor="gender">Gender:</label>
-        <select>
-            <option disabled>Select your gender</option>
-            <option value="m">Male</option>
-            <option value="f">Female</option>
-        </select>
-
-        <label htmlFor="gender">Date of birth:</label>
-        <input type="date" name="birthday" id="birthday"/>
-        
-        <label htmlFor="email">Email:</label>
-        <input type="email" name="email"/>
-        
-        <label htmlFor="telephone">Phone No:</label>
-        <input type="tel" name="telephone"/>
-
-        <label htmlFor="hall">Hall:</label>
-        <input type="text" name="hall" id="hall" />
-
-        <label htmlFor="roomno">Room No:</label>
-        <input type="number" name="roomno" id="roomno" />
-
-        <label htmlFor="bible">Favorite bible verse:</label>
-        <input type="text" name="bible" id="bible" />
-
-        <label htmlFor="bible">Favorite bible verse:</label>
-        <label htmlFor="bible">Favorite bible verse:</label>
-        <label htmlFor="bible">Favorite bible verse:</label>
-        <label htmlFor="bible">Favorite bible verse:</label>
-        <input type="radio" name="team" id="follow" value="1"/>
-        <input type="radio" name="team" id="media" value="2"/>
-        <input type="radio" name="team" id="welfare" value="3"/>
-
-        <label htmlFor="bible">How can we pray for you?</label>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="Submit" />
+        <InputTxt label="Phone Number" input={'tel'}/>
+        <InputTxt label="Hall" inline={true}/>
+        <InputTxt label="Room No" inline={true}/>
+        <div className="flex justify-between">
+          <InputTxt label="Date of birth" input={'date'} inline={true}/>
+          <div>
+            <label htmlFor="level" className="text-white">Level: </label>
+            <select name="level">
+              <option disabled>Level</option>
+              <option value='100'>100</option>
+              <option value='200'>200</option>
+              <option value='300'>300</option>
+              <option value='400'>400</option>
+              <option value='500'>500</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="gender" className="text-white">Gender: </label>
+            <select>
+              <option disabled>Gender</option>
+              <option value='m'>Male</option>
+              <option value='f'>Female</option>
+            </select>
+          </div>
+        </div>
+        <InputTxt label="Favorite Bible Verse"/>
     </form>
   )
 }
