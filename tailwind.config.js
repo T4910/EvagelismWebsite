@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {  
         backgroundImage: {
-          'background': "url('/bg.jpg')",
-          'background2': "url('/bg2.jpg')",
-          'background3': "url('/bg(edit)2.jpg')",
+          'background': "url('/images/bg.jpg')",
+          'background2': "url('/images/bg2.jpg')",
+          'background3': "url('/images/bg(edit)2.jpg')",
         },
     },
   },

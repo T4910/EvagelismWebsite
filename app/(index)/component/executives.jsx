@@ -1,12 +1,11 @@
 import ImageSlider from "./imageslider"
-import Image from "next/image"
 
 const source = [
-  {serial: 2, src: '/GEN.jpg'},
-  {serial: 2, src: '/1.jpg'},
-  {serial: 2, src: '/HEAD.jpg'},
-  {serial: 2, src: '/2.jpg'},
-  {serial: 2, src: '/VGEN.jpg'}
+  {serial: 1, src: '/images/GEN.jpg'},
+  {serial: 2, src: '/images/1.jpg'},
+  {serial: 3, src: '/images/HEAD.jpg'},
+  {serial: 4, src: '/images/2.jpg'},
+  {serial: 5, src: '/images/VGEN.jpg'}
 ]
 
 const executives = () => {

@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import { useState, useRef, useEffect } from "react"
+import { useRef, useEffect } from "react"
 
 const imageslider = ({ source }) => {
   const containerRef = useRef(null);
@@ -9,7 +9,6 @@ const imageslider = ({ source }) => {
         let startX, startY, scrollDir, interval
         let scrollAmount = 1
         let time = 20
-
 
         const handleScroll = () => {
             // Reach endpoint while scrolling to right
@@ -91,7 +90,8 @@ const imageslider = ({ source }) => {
             <Image
               key={serial}
               src={src}
-              className={`box-border w-72 h-96 rounded-xl ${ serial == 3 ? 'scale-100' : (serial == 2 || serial == 4) ? 'scale-90' : 'scale-75'}`}
+            //   ${ serial == 3 ? 'scale-100' : (serial == 2 || serial == 4) ? 'scale-90' : 'scale-75'}
+              className={`box-border w-72 h-96 rounded-xl scale-75`}
               width={300}
               height={300}
             />

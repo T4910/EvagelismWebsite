@@ -12,7 +12,7 @@ const statement = () => {
         </p>
       </Card>
       <div className="flex w-5/6 mx-auto gap-2">
-        <Image className="hidden md:block rounded-xl" src="/EXEC.jpg" width={400} height={400}/>
+        <Image className="hidden md:block rounded-xl" src="/images/EXEC.jpg" width={400} height={400}/>
         <div className="p-12 flex flex-col justify-center gap-2">
           <h4 className=" font-extrabold text-orange-500 text-xl">Mission</h4>
           <div>
