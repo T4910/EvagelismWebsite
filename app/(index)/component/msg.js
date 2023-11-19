@@ -1,13 +1,17 @@
 'use server'
+import { cookies } from 'next/headers'
 import nodemailer from 'nodemailer'
 
-export default async function SendEmail(form){
-    const surname = form.get('surname')
-    const othernames = form.get('othername')
-    const email = form.get('email')
 
+export default async function SendEmail(prevState, formData){
+    if (prevState.state == 'err') return {state: null} // reset the form
+
+    const surname = formData.get('surname')
+    const othernames = formData.get('othername')
+    const email = formData.get('email')
+
+    if (!surname || !email || !othernames) return {state: 'err'}
     const name = surname.toUpperCase() + ' ' + othernames
-    if (!name || !email || !othernames) return 
 
     try {
       // Set up nodemailer transporter
@@ -31,10 +35,10 @@ export default async function SendEmail(form){
         text: `Name: ${name}\nEmail: ${email}`,
       });
 
-      console.log('Message sent: %s', info.messageId);
-
-      return console.log({ message: 'Form submitted successfully' });
+      if (!cookies().get('dxs6yt532')?.value) cookies().set('dxs6yt532', true)
+    
+      return {state: 'ok'}
     } catch (error) {
-        return console.error('Error sending email:', error);
+        return {state: 'err'}
     }
   }
