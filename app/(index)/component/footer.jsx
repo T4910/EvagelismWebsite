@@ -10,7 +10,7 @@ const footer = () => {
           <Form />
           <Conclusion />
       </div>
-      <div className="text-white bg-orange-500 text-center w-full">@ {currentYear} Landmark University Evangelism Group</div>
+      <div className="text-white bg-orange-500 text-center w-full">&copy; {currentYear} Landmark University Evangelism Group</div>
     </footer>
   )
 }

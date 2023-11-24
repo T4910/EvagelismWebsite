@@ -2,7 +2,7 @@
 import { useFormStatus, useFormState } from 'react-dom'
 import sendMsg from './msg.js'
 
-const emailFormContent = ({cookie: hasSentBefore}) => {
+const emailFormContent = ({cookie: hasSentBefore, refresh: Refresh}) => {
     const [{state: msgState}, formAction] = useFormState(sendMsg, {state: null})
     
     const Output = () => {
@@ -67,10 +67,11 @@ const emailFormContent = ({cookie: hasSentBefore}) => {
 
     const Error = () => {
         return (
-            <div  className="py-16 text-center text-xl font-semibold text-orange-400">
+            <div  className="py-8 text-center text-xl font-semibold text-orange-400">
             <p>Error in the server</p>
-            <p className="mb-8">Did you put in a valid email address?</p>
-            <button formAction={formAction}>Refresh</button>
+            {/* <p></p> */}
+            <p className="mb-8">Did you put in a valid email address? Do you have a good internet connection?</p>
+            <button className='font-extrabold text-4xl hover:scale-105' formAction={formAction}>{Refresh}</button>
             </div>
         )
     }
