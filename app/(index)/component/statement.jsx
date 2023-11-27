@@ -1,9 +1,11 @@
-import Card from "./statementCard"
+import Card from "./visionCard"
 import Image from "next/image"
 
+// Add cursor effect that moves with the cursor - don't change cursor
+// put the dynamic layer infront bg but behind text
 const statement = () => {
   return (
-    <div className="flex flex-col justify-around py-12 pb-20 bg-orange-100">
+    <div className="flex flex-col justify-around py-12 pb-20 bg-orange-100 lg:gap-6">
       <Card heading="Vision">
         <p className="text-lg">
           "To revive the glorious destinies of men by termination
